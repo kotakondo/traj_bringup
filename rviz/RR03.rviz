@@ -1,0 +1,343 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded: ~
+      Splitter Ratio: 0.5
+    Tree Height: 1169
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 255; 255; 255
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 50
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        back_sonar:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_sonar:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_back_left_axle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_back_left_hub:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_back_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_back_right_axle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_back_right_hub:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_back_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_front_left_axle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_front_left_hub:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_front_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_front_right_axle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_front_right_hub:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        p3at_front_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        top_plate:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        back_sonar:
+          Value: true
+        base_link:
+          Value: true
+        front_sonar:
+          Value: true
+        odom:
+          Value: true
+        p3at_back_left_axle:
+          Value: true
+        p3at_back_left_hub:
+          Value: true
+        p3at_back_left_wheel:
+          Value: true
+        p3at_back_right_axle:
+          Value: true
+        p3at_back_right_hub:
+          Value: true
+        p3at_back_right_wheel:
+          Value: true
+        p3at_front_left_axle:
+          Value: true
+        p3at_front_left_hub:
+          Value: true
+        p3at_front_left_wheel:
+          Value: true
+        p3at_front_right_axle:
+          Value: true
+        p3at_front_right_hub:
+          Value: true
+        p3at_front_right_wheel:
+          Value: true
+        top_plate:
+          Value: true
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        odom:
+          base_link:
+            back_sonar:
+              {}
+            front_sonar:
+              {}
+            p3at_back_left_axle:
+              p3at_back_left_hub:
+                {}
+            p3at_back_right_axle:
+              p3at_back_right_hub:
+                {}
+            p3at_front_left_axle:
+              p3at_front_left_hub:
+                {}
+            p3at_front_right_axle:
+              p3at_front_right_hub:
+                {}
+            top_plate:
+              {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 0; 255; 0
+      Enabled: false
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.05000000074505806
+      Name: ReferencePath
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0.009999999776482582
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /RR03/reference_trajectory
+      Value: false
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 255; 0; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.05000000074505806
+      Name: ActualPath
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0.009999999776482582
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /RR03/actual_trajectory
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: TrajectoryMarkers
+      Namespaces:
+        trajectory: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /RR03/trajectory_markers
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/PointStamped
+      Color: 0; 255; 255
+      Enabled: true
+      History Length: 1
+      Name: LookaheadPoint
+      Radius: 0.20000000298023224
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /RR03/lookahead_point
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 192; 191; 188
+    Fixed Frame: odom
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 18.485897064208984
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 4.4313435554504395
+        Y: -1.0746870040893555
+        Z: -0.4011867642402649
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7753981947898865
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 1.515397548675537
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 2123
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd0000000100000000000001cb000007f1fc0200000002fb000000100044006900730070006c006100790073010000003d000004ce000000c900fffffffb0000000a0056006900650077007301000005110000031d000000a400ffffff000005af000007f100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 1920
+  Y: 0
