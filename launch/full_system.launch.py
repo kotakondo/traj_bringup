@@ -70,6 +70,7 @@ def generate_launch_description():
                 launch_arguments={
                     "traj_shape": LaunchConfiguration("traj_shape"),
                     "robot_name": LaunchConfiguration("robot_name"),
+                    "odom_topic": LaunchConfiguration("odom_topic"),
                 }.items(),
             ),
         ],

@@ -40,7 +40,7 @@ def generate_launch_description():
     )
 
     odom_topic_arg = DeclareLaunchArgument(
-        "odom_topic", default_value="odom",
+        "odom_topic", default_value="dlio/odom_node/odom",
         description="Input odometry topic name (relative to namespace)",
     )
 
@@ -63,6 +63,7 @@ def generate_launch_description():
         launch_arguments={
             "traj_shape": LaunchConfiguration("traj_shape"),
             "robot_name": LaunchConfiguration("robot_name"),
+            "odom_topic": LaunchConfiguration("odom_topic"),
         }.items(),
     )
 

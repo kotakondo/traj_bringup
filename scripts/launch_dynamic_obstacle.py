@@ -13,6 +13,7 @@ Usage:
     python3 launch_dynamic_obstacle.py
 """
 
+import argparse
 import subprocess
 import sys
 import time
@@ -40,6 +41,17 @@ def send_keys(pane, cmd, enter=True):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Launch tmux session for dynamic obstacle experiments.")
+    parser.add_argument(
+        "traj_shape",
+        nargs="?",
+        default="line",
+        choices=["line", "circle", "8"],
+        help="Trajectory shape (default: line)",
+    )
+    args = parser.parse_args()
+    traj_shape = args.traj_shape
+
     # Kill existing session if it exists
     subprocess.run(
         ["tmux", "kill-session", "-t", SESSION],
@@ -65,7 +77,7 @@ def main():
     time.sleep(2)
     send_keys(
         1,
-        "ros2 launch traj_bringup hardware.launch.py traj_shape:=line",
+        f"ros2 launch traj_bringup hardware.launch.py traj_shape:={traj_shape}",
         enter=False,
     )
 
