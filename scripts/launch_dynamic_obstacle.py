@@ -22,7 +22,7 @@ SESSION = "docker_hardware_ground_robot"
 WINDOW = "main"
 
 SRC_COMMON = "source /opt/ros/humble/setup.bash && source /home/swarm/.bashrc"
-SRC_MIGHTY = f"{SRC_COMMON} && source /home/swarm/code/mighty_ws/install/setup.bash"
+SRC_MIGHTY = f"{SRC_COMMON} && source /home/swarm/ws/rover_ws/install/setup.bash"
 SRC_TRAJ = f"{SRC_COMMON} && source /home/swarm/code/trajectory_generator_ws/install/setup.bash"
 
 
@@ -58,6 +58,9 @@ def main():
         capture_output=True,
     )
 
+    # Ensure tmux panes use bash (default may be /bin/sh which lacks `source`)
+    tmux("set-option", "-g", "default-shell", "/bin/bash")
+
     # Create session with first pane (will become htop - top half)
     tmux("new-session", "-d", "-s", SESSION, "-n", WINDOW)
 
@@ -84,14 +87,14 @@ def main():
     # Pane 2: Livox
     send_keys(2, SRC_MIGHTY)
     send_keys(
-        2, "ros2 launch livox_ros_driver2 run_MID360_launch.py namespace:=$ROVER_NAME"
+        2, "ros2 launch rover_sensors livox.launch.yaml"
     )
 
     # Pane 3: Static TF
     send_keys(3, SRC_MIGHTY)
     send_keys(
         3,
-        "ros2 run tf2_ros static_transform_publisher 0 0 0 0 0.3490659 0 "
+        "ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 "
         "$ROVER_NAME/base_link $ROVER_NAME/lidar",
     )
 
@@ -99,7 +102,7 @@ def main():
     send_keys(4, SRC_MIGHTY)
     send_keys(
         4,
-        "ros2 launch direct_lidar_inertial_odometry dlio.launch.py namespace:=$ROVER_NAME",
+        "ros2 launch rover_navigation dlio.launch.yaml",
     )
 
     # Attach to session
